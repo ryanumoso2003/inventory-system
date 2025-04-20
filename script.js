@@ -53,3 +53,11 @@ class Store {
   
   const milk = new PerishableProductProperties("Milk", 1.5, 10, "2025-05-01");
   const yogurt = new PerishableProductProperties("Yogurt", 0.99, 20, "2025-04-25");
+
+  const store = new Store();
+  store.addProduct(apple);
+  store.addProduct(chair);
+  store.addProduct(tv);
+  store.addProduct(milk);
+  store.addProduct(yogurt);
+  
