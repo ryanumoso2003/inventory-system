@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+  }
+  h1 {
+    color: #005fa3;
+  }
+  pre {
+    background: #eee;
+    padding: 10px;
+  }
+  
