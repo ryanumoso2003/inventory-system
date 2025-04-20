@@ -21,30 +21,36 @@ class ProductProperties {
       }
 }
 
+// PerishableProductProperties subclass
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
         super(name, price, quantity);
         this.expirationDate = expirationDate;
       }
     
+      // Overrides toString to include the expiration date
       toString() {
         return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
       }
 }
-    
+ 
+// Store Class
 class Store {
     constructor() {
-      this.inventory = [];
+      this.inventory = []; // Holds regular and perishable products
     }
   
+    // Adds a product to the inventory
     addProduct(product) {
       this.inventory.push(product);
     }
   
+    // Calculates total value off all items
     getInventoryValue() {
       return this.inventory.reduce((sum, product) => sum + product.getTotalValue(), 0);
     }
   
+    // Finds a product by its name
     findProductByName(name) {
       return this.inventory.find(p => p.name.toLowerCase() === name.toLowerCase()) || null;
     }
