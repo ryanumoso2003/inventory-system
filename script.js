@@ -70,3 +70,8 @@ class Store {
   ProductProperties.applyDiscount(store.inventory, 0.15);
 
   output.innerText += `After 15% Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
+
+  const foundProduct = myStore.findProductByName("Milk");
+  output.innerText += foundProduct
+    ? `Found Product: ${foundProduct.toString()}`
+    : "Product not found.";
