@@ -46,3 +46,6 @@ class Store {
     }
   }
   
+  const apple = new ProductProperties("Apple", 2.5, 50);
+  const chair = new ProductProperties("Chair", 35.0, 10);
+  const tv = new ProductProperties("TV", 400.0, 5);
