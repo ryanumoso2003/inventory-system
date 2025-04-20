@@ -49,3 +49,7 @@ class Store {
   const apple = new ProductProperties("Apple", 2.5, 50);
   const chair = new ProductProperties("Chair", 35.0, 10);
   const tv = new ProductProperties("TV", 400.0, 5);
+
+  
+  const milk = new PerishableProductProperties("Milk", 1.5, 10, "2025-05-01");
+  const yogurt = new PerishableProductProperties("Yogurt", 0.99, 20, "2025-04-25");
