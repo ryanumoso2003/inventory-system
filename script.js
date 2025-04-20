@@ -46,8 +46,8 @@ class Store {
     }
   }
 
-  const output = document.getElementById("output");
-
+  const inventoryOutput = document.getElementById("inventoryOutput");
+  const searchOutput = document.getElementById("searchOutput");
   
   const apple = new ProductProperties("Apple", 2.5, 50);
   const chair = new ProductProperties("Chair", 35.0, 10);
@@ -64,14 +64,20 @@ class Store {
   store.addProduct(milk);
   store.addProduct(yogurt);
 
-  output.innerText += " Inventory System \n\n";
-  output.innerText += `Before Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
-
+  inventoryOutput.innerText += "Inventory System\n\n";
+  inventoryOutput.innerText += `Before Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
+  
   ProductProperties.applyDiscount(store.inventory, 0.15);
+  
+  inventoryOutput.innerText += `After 15% Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
+  
 
-  output.innerText += `After 15% Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
-
-  const foundProduct = myStore.findProductByName("Milk");
-  output.innerText += foundProduct
-    ? `Found Product: ${foundProduct.toString()}`
-    : "Product not found.";
+  function searchProduct() {
+    const searchInput = document.getElementById("searchInput").value.trim();
+    const result = store.findProductByName(searchInput);
+  
+    searchOutput.innerText = `Search: ${searchInput}\n`;
+    searchOutput.innerText += result ? result.toString() : "Product not found.";
+  }
+  
+  window.searchProduct = searchProduct;
