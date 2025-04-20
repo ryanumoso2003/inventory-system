@@ -64,4 +64,9 @@ class Store {
   store.addProduct(milk);
   store.addProduct(yogurt);
 
+  output.innerText += " Inventory System \n\n";
   output.innerText += `Before Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
+
+  ProductProperties.applyDiscount(store.inventory, 0.15);
+
+  output.innerText += `After 15% Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
