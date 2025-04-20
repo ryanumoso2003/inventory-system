@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management System</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1> Inventory System</h1>
-    <h2>Search Product</h2>
-    <input type="text" id="searchInput" placeholder="Enter product name" />
-    <button onclick="searchProduct()">Search</button>
-    <pre id ="output"></pre>
-    <script src ="script.js"></script>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+        <pre id="output"></pre>
+  <h1>Inventory System</h1>
+
+  <!-- Inventory Display Section -->
+  <h2>Inventory</h2>
+  <pre id="inventoryOutput"></pre>
+
+  <!-- Search Product Section -->
+  <h2>Search Product</h2>
+  <input type="text" id="searchInput" placeholder="Enter product name" />
+  <button onclick="searchProduct()">Search</button>
+  <pre id="searchOutput"></pre>
+    </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
