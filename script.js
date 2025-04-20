@@ -1,17 +1,21 @@
+// ProductProperties Class
 class ProductProperties {
     constructor(name, price, quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
+    // Calculates total value of product's stock
     getTotalValue() {
         return this.price * this.quantity;
       }
     
+      // Returns string of the product details
       toString() {
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
       }
     
+      // Applies discount to array of products
       static applyDiscount(products, discount) {
         products.forEach(p => p.price -= p.price * discount);
       }
