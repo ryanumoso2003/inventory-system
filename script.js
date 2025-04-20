@@ -45,6 +45,9 @@ class Store {
       return this.inventory.find(p => p.name.toLowerCase() === name.toLowerCase()) || null;
     }
   }
+
+  const output = document.getElementById("output");
+
   
   const apple = new ProductProperties("Apple", 2.5, 50);
   const chair = new ProductProperties("Chair", 35.0, 10);
@@ -60,4 +63,5 @@ class Store {
   store.addProduct(tv);
   store.addProduct(milk);
   store.addProduct(yogurt);
-  
+
+  output.innerText += `Before Discount: $${store.getInventoryValue().toFixed(2)}\n\n`;
